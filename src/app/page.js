@@ -1,93 +1,51 @@
-import Image from "next/image";
+"use client";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const handleClick = () => {
+    alert("Button clicked!");
+  };
+
   return (
     <div className={styles.page}>
+      <header>
+        <h1 className={styles.title}>LA AVENTURA CONTINUA</h1>
+      </header>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        <div className={styles.greeting}>
+          <div className={styles.greetingCard}>
+            <h2>&#129505; Hola, Nachito! &#129505;</h2>
+            <p>
+              Tengo una mision muy especial para ti. Perseito salio a pasear, y
+              ahora tiene mucha hambre. Es muy importante que lo alimentes, para{" "}
+              <b>pasar al siguiente nivel.</b>
+            </p>
+          </div>
         </div>
+        <div className={styles.instructions}>
+          <h3>&#127775; Instrucciones para la mision &#127775;</h3>
+          <p>
+            1. Toca la parte derecha o izquierda para mover a Perseito de un
+            lado a otro.
+          </p>
+          <p>
+            2. Atrapa 20 croquetas, para que puedas pasar al siguiente nivel.
+          </p>
+        </div>
+        <Link href="/perseoGame">
+          <div className={styles.button}>
+            <p>EMPIEZA LA AVENTURA!</p>
+          </div>
+        </Link>
       </main>
       <footer className={styles.footer}>
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://www.instagram.com/corake"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          Hecho con mucho carino, por Luigito &#128153;
         </a>
       </footer>
     </div>
