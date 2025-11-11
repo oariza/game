@@ -10,32 +10,30 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header>
-        <h1 className={styles.title}>LA AVENTURA CONTINUA</h1>
+        <h1 className={styles.title}>PERSEO TIENE HAMBRE</h1>
       </header>
       <main className={styles.main}>
         <div className={styles.greeting}>
           <div className={styles.greetingCard}>
             <h2>&#129505; Hola, Nachito! &#129505;</h2>
             <p>
-              Tengo una mision muy especial para ti. Perseito salio a pasear, y
-              ahora tiene mucha hambre. Es muy importante que lo alimentes, para{" "}
+              Ayuda a Perseo a atrapar su comida favorita. Si lo haces bien, podrás{" "}
               <b>pasar al siguiente nivel.</b>
             </p>
           </div>
         </div>
         <div className={styles.instructions}>
-          <h3>&#127775; Instrucciones para la mision &#127775;</h3>
+          <h3>&#127775; Instrucciones para la misión &#127775;</h3>
           <p>
-            1. Toca la parte derecha o izquierda para mover a Perseito de un
-            lado a otro.
+            1. Toca los botones en tu pantalla para mover a Perseo.
           </p>
           <p>
-            2. Atrapa 20 croquetas, para que puedas pasar al siguiente nivel.
+            2. Atrapa 50 pollos fritos, para avanzar al siguiente nivel.
           </p>
         </div>
         <Link href="/perseoGame">
           <div className={styles.button}>
-            <p>EMPIEZA LA AVENTURA!</p>
+            <p>COMENZAR EL JUEGO</p>
           </div>
         </Link>
       </main>
@@ -45,7 +43,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hecho con mucho carino, por Luigito &#128153;
+          Hecho con mucho cariño, por Luigito &#128153;
         </a>
       </footer>
     </div>

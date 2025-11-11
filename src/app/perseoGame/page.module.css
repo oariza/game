@@ -1,0 +1,41 @@
+/* Estilo del contenedor principal para centrar el juego y los botones */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; 
+}
+
+/* El canvas ya debe tener tu estilo original */
+.page {
+  /* Estilo visual del canvas */
+}
+
+/* Contenedor de los botones de control */
+.controls {
+  display: flex;
+  justify-content: space-around;
+  width: 400px; /* Mismo ancho que el canvas */
+  max-width: 90%; /* Ajuste para pantallas pequeñas */
+  margin-top: 15px; /* Espacio entre el juego y los botones */
+}
+
+/* Estilo individual del botón */
+.controlButton {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(180deg,rgb(243, 150, 84) 0%, rgb(236, 80, 32) 50%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  user-select: none; 
+  flex: 1; 
+  margin: 0 10px;
+  touch-action: manipulation; /* Importante para el rendimiento en móviles */
+}
+
+.controlButton:active {
+  background: linear-gradient(180deg,rgb(168, 104, 58) 0%, rgb(145, 49, 20) 50%);
+}
