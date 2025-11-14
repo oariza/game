@@ -39,3 +39,50 @@
 .controlButton:active {
   background: linear-gradient(180deg,rgb(168, 104, 58) 0%, rgb(145, 49, 20) 50%);
 }
+
+/* Estilo para oscurecer el fondo */
+.modalOverlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con 80% de transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté por encima del canvas */
+}
+
+/* Estilo para el contenedor de la ventana emergente */
+.modalContent {
+  background-color: #222; 
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 300px; /* Un poco más pequeña para el juego */
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid #444;
+}
+
+/* Estilos para los botones dentro de la modal */
+.modalButtons {
+  margin-top: 20px;
+}
+
+.modalConfirmButton {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  width: 100%; 
+  background-color: #4caf50; /* Color que denote continuar */
+  color: white;
+}
+
+.modalConfirmButton:hover {
+  background-color: #45a049;
+}

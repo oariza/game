@@ -5,28 +5,21 @@ import styles from "./page.module.css";
 import { useEffect, useState } from "react"; // ✨ Importar useState y useEffect
 
 export default function Question() {
-  // ✨ NUEVO ESTADO: Controla la visibilidad de los botones
   const [showButtons, setShowButtons] = useState(false);
-
-  // ✨ NUEVO EFECTO: Usa setTimeout para mostrar los botones después de 3 segundos
   useEffect(() => {
-    // Definir el tiempo de espera (3000 milisegundos = 3 segundos)
     const timer = setTimeout(() => {
-      setShowButtons(true); // Cambia el estado a 'true' para mostrar los botones
-    }, 3000);
-
-    // Función de limpieza: Limpia el temporizador si el componente se desmonta antes
+      setShowButtons(true);
+    }, 5000);
     return () => clearTimeout(timer);
-  }, []); // El array de dependencia vacío ([]) asegura que esto solo se ejecute al montar.
+  }, []);
 
   const sendEmailYes = () => {
     emailjs
       .sendForm(
         "service_novios",
         "template_d13e367",
-        // El tercer argumento (#email-form-yes) funciona porque definiste los <form>
         "#email-form-yes"
-        // Si no usaste emailjs.init(), tu Public Key iría aquí como cuarto argumento (string)
+        //"WfRDVv67X_diREBoP"
       )
       .then(
         (result) => {
@@ -40,7 +33,12 @@ export default function Question() {
 
   const sendEmailNo = () => {
     emailjs
-      .sendForm("service_novios", "template_zw8hgjj", "#email-form-no")
+      .sendForm(
+        "service_novios",
+        "template_zw8hgjj",
+        "#email-form-no",
+        //"WfRDVv67X_diREBoP"
+      )
       .then(
         (result) => {
           console.log("¡Correo enviado con éxito!", result.text);
@@ -54,27 +52,21 @@ export default function Question() {
   return (
     <div className={styles.page}>
       <main style={{ textAlign: "center", marginTop: "20px" }}>
-        <h1 className={styles.title}>NIVEL COMPLETADO!</h1>
+        <h1 className={styles.title}>¡NIVEL COMPLETADO!</h1>
         <div className={styles.greeting}>
           <div className={styles.greetingCard}>
             <p>
-              Perseo ya comió su alimento... Y a Luigito le gustaría{" "}
+              Hemos pasado un tiempo coleccionando momentos, risas, aventuras y muchos, muchos pollos fritos. Eres mi mejor compañero de juego y quisiera {" "}
               <b>pasar al siguiente nivel contigo.</b>
-            </p>
-            <p>
-              Me encantas, me haces feliz y quiero que sigamos construyendo esto
-              juntos...
             </p>
           </div>
         </div>
-
-        {/* ✨ CAMBIO PRINCIPAL: Renderizado condicional basado en showButtons */}
         {showButtons && (
           <div>
             <h2 className={styles.question}>¿Quieres ser mi novio?</h2>
             <div
               className={styles.containerButtons}
-              style={{ marginTop: "40px" }}
+              style={{ marginTop: "20px" }}
             >
               <Link href="/answerYes">
                 <div className={styles.button} onClick={sendEmailYes}>
@@ -89,8 +81,6 @@ export default function Question() {
             </div>
           </div>
         )}
-
-        {/* Los formularios invisibles deben estar fuera del renderizado condicional */}
         <form id="email-form-yes"></form>
         <form id="email-form-no"></form>
       </main>

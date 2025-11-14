@@ -10,20 +10,13 @@ export default function Question() {
           <div className={styles.greetingCard}>
             <p>A veces el camino lleva a niveles distintos. Y está bien.</p>
             <p>Me quedo con lo bonito que compartimos.</p>
-            <div>
+            <div className={styles.imgContainer}>
               <img
                 src="/no-family.png"
                 style={{ width: "300px" }}
               />
             </div>
           </div>
-        </div>
-        <div className={styles.containerButtons} style={{ marginTop: "40px" }}>
-          <Link href="/answerNo">
-            <div className={styles.secondaryButton}>
-              <p>Cerrar</p>
-            </div>
-          </Link>
         </div>
       </main>
     </div>

@@ -28,7 +28,7 @@ export default function Home() {
             1. Toca los botones en tu pantalla para mover a Perseo.
           </p>
           <p>
-            2. Atrapa 50 pollos fritos, para avanzar al siguiente nivel.
+            2. Atrapa 30 pollos fritos, para avanzar al siguiente nivel.
           </p>
         </div>
         <Link href="/perseoGame">
