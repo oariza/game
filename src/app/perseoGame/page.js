@@ -180,7 +180,7 @@ const PerseoGame = () => {
           scoreRef.current += 1;
           foodRef.current.splice(i, 1);
 
-          if (scoreRef.current >= 30) {
+          if (scoreRef.current >= 40) {
             isGameRunning = false;
             // Detener el bucle de requestAnimationFrame completamente
             cancelAnimationFrame(animationFrameId);
