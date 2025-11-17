@@ -287,7 +287,7 @@ const PerseoGame = () => {
       <canvas
         ref={canvasRef}
         className={styles.page}
-        width={350}
+        width={300}
         height={500}
         style={{
           border: "1px solid black",
