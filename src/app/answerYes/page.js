@@ -31,7 +31,7 @@ export default function AnswerYes() {
         <div className={styles.greeting}>
           <div className={styles.greetingCard}>
             <p>
-              A partir de hoy, <b>{now}</b>, somos un equipo oficial. Y estás en
+              A partir del 16 de noviembre de 2025, somos un equipo oficial. Y estás en
               mi corazón como <b>player 1.</b>
             </p>
             <div className={styles.imgContainer}>
